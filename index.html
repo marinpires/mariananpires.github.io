@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariana N. Pires</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@500;600&display=swap" rel="stylesheet">
@@ -68,14 +67,14 @@
 
         /* ── About ── */
         #about {
-            padding: 7rem 2rem 5rem;
+            padding: 4.5rem 2rem 5rem;
         }
 
         .about-inner {
             max-width: 860px;
             margin: 0 auto;
             display: flex;
-            gap: 3rem;
+            gap: 1.5rem;
             align-items: flex-start;
         }
 
@@ -85,12 +84,12 @@
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
-            width: 240px;
+            width: 180px;
         }
 
         .profile-photo {
-            width: 240px;
-            height: 240px;
+            width: 180px;
+            height: 180px;
             border-radius: 8px;
             object-fit: cover;
             object-position: center top;
@@ -101,7 +100,7 @@
 
         .photo-name {
             font-family: 'DM Sans', sans-serif;
-            font-size: 1.65rem;
+            font-size: 1.3rem;
             font-weight: 600;
             letter-spacing: -0.01em;
             text-align: center;
@@ -112,13 +111,13 @@
 
         /* ── Visits list ── */
         .positions-label {
+            display: block;
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--text-muted);
-            margin-bottom: 0.6rem;
-            margin-top: 1.5rem;
+            margin: 2rem 0 0 !important;
         }
 
         .positions-list {
@@ -141,6 +140,22 @@
             color: var(--accent);
         }
 
+        .about-text {
+            flex: 1;
+            padding-top: 0.75rem;
+        }
+
+        .about-text p a,
+        .positions-list a {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: var(--border);
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+        .about-text p a:hover,
+        .positions-list a:hover { color: var(--accent); }
+
         .about-text .subtitle {
             color: var(--text-muted);
             font-size: 1rem;
@@ -151,7 +166,6 @@
             color: #cbd5e1;
             font-size: 0.975rem;
             margin-bottom: 1rem;
-            max-width: 560px;
             text-align: justify;
         }
 
@@ -209,7 +223,7 @@
 
         /* ── Research ── */
         #research {
-            padding: 5rem 2rem;
+            padding: 3rem 2rem;
             background: var(--bg-alt);
         }
 
@@ -260,7 +274,7 @@
         }
 
         /* ── CV ── */
-        #cv { padding: 5rem 2rem; }
+        #cv { padding: 3rem 2rem; }
 
         .cv-download {
             display: inline-flex;
@@ -290,15 +304,24 @@
         /* ── Responsive ── */
         @media (max-width: 640px) {
             .about-inner { flex-direction: column; align-items: center; }
-            .about-text h1 { font-size: 1.65rem; }
             .profile-photo { width: 150px; height: 150px; }
+            .photo-col { width: 100%; }
+            .photo-name { font-size: 1.4rem; }
+            #about { padding: 4rem 1.25rem 3rem; }
+            #research, #cv { padding: 3rem 1.25rem; }
+            .positions-list li,
+            .about-text p,
+            .paper-title,
+            .paper-authors,
+            .paper-abstract { text-align: left; }
+            .paper { padding-left: 0.6rem; }
         }
     </style>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav>
+<!--<nav>
     <div class="nav-inner">
         <ul>
             <li><a href="#about">About</a></li>
@@ -306,7 +329,7 @@
             <li><a href="#cv">CV</a></li>
         </ul>
     </div>
-</nav>
+</nav> -->
 
 <!-- About -->
 <section id="about">
@@ -340,14 +363,14 @@
 
         <!-- Text column -->
         <div class="about-text">
-            <p>I am a PhD candidate at Nova School of Business and Economics. My research sits at the intersection of <strong>macroeconomics</strong> and <strong>finance</strong>, focusing on monetary policy, household finance, and housing. Before the PhD, I worked at the European Central Bank.</p>
+            <p>I am a PhD candidate at <a href="https://www.novasbe.unl.pt/en/programs/phds/phd-in-economics-finance/overview" target="_blank" rel="noopener">Nova School of Business and Economics</a>. My research sits at the intersection of <strong>macroeconomics</strong> and <strong>finance</strong>, focusing on monetary policy, household finance, and housing. Before the PhD, I worked at the European Central Bank.</p>
 
             <p class="positions-label">Visitings &amp; research experiences </p>
             <ul class="positions-list">
-                <li>Research Division, <strong>Sveriges Riksbank</strong> (Stockholm)</li>
-                <li>Economics and Research Department, <strong>Banco de Portugal</strong> (Lisbon)</li>
-                <li>Department of Economics, <strong>Stockholm University</strong> (Stockholm)</li>
-                <li>Research Department, <strong>International Monetary Fund</strong> (Washington D.C.)</li>
+                <li>Research Division, <strong><a href="https://www.riksbank.se/en-gb/" target="_blank" rel="noopener">Sveriges Riksbank</a></strong> (Stockholm)</li>
+                <li>Economics and Research Department, <strong><a href="https://www.bportugal.pt/en" target="_blank" rel="noopener">Banco de Portugal</a></strong> (Lisbon)</li>
+                <li>Department of Economics, <strong><a href="https://www.su.se/department-of-economics/" target="_blank" rel="noopener">Stockholm University</a></strong> (Stockholm)</li>
+                <li>Research Department, <strong><a href="https://www.imf.org/" target="_blank" rel="noopener">International Monetary Fund</a></strong> (Washington D.C.)</li>
             </ul>
         </div>
 

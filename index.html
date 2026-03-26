@@ -265,6 +265,29 @@
             margin-bottom: 0.4rem;
         }
 
+        .paper-abstract-toggle {
+            margin-top: 0.5rem;
+        }
+
+        .paper-abstract-toggle summary {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            list-style: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            user-select: none;
+        }
+        .paper-abstract-toggle summary::-webkit-details-marker { display: none; }
+        .paper-abstract-toggle summary::before {
+            content: "▸";
+            font-size: 0.7rem;
+            transition: transform 0.2s;
+        }
+        .paper-abstract-toggle[open] summary::before { transform: rotate(90deg); }
+        .paper-abstract-toggle summary:hover { color: var(--accent-lt); }
+
         .paper-abstract {
             font-size: 0.85rem;
             color: var(--text-muted);
@@ -399,9 +422,12 @@
                 <p class="paper-authors">
                     with <a href="https://jbduarte.com/" target="_blank" rel="noopener">João B. Duarte</a>
                 </p>
-                <p class="paper-abstract">
-                    We study how financial integration shapes the transmission of monetary policy to consumer prices and output in the euro area. Using local projections, we document that the effect of financial integration is continuous: greater integration systematically strengthens the pass-through of monetary policy. When integration falls to low levels—around the first quartile of its historical distribution—transmission to both prices and output becomes statistically and economically insignificant. The amplification pattern is pervasive across member states and more pronounced in peripheral economies. These results show that financial integration is a key determinant of monetary policy effectiveness within the euro area.
-                </p>
+                <details class="paper-abstract-toggle">
+                    <summary>Abstract</summary>
+                    <p class="paper-abstract">
+                        We study how financial integration shapes the transmission of monetary policy to consumer prices and output in the euro area. Using local projections, we document that the effect of financial integration is continuous: greater integration systematically strengthens the pass-through of monetary policy. When integration falls to low levels—around the first quartile of its historical distribution—transmission to both prices and output becomes statistically and economically insignificant. The amplification pattern is pervasive across member states and more pronounced in peripheral economies. These results show that financial integration is a key determinant of monetary policy effectiveness within the euro area.
+                    </p>
+                </details>
             </div>
 
             <div class="paper">
@@ -418,9 +444,12 @@
                     <a href="https://sites.google.com/site/hansaholter/" target="_blank" rel="noopener">Hans Holter</a>, and
                     <a href="https://luistelesm.github.io/" target="_blank" rel="noopener">Luís Teles Morais</a>
                 </p>
-                <p class="paper-abstract">
-                    How does monetary policy affect household portfolio composition? Resorting to highly granular data on the balance sheets of Norwegian households, we analyze how their wealth portfolios change in response to well-identified monetary policy shocks. We document new empirical facts about how household portfolios adjust to monetary tightening: i) total portfolio size rises initially but contracts after two years; ii) risky asset values decline, while housing wealth increases briefly before falling, with secondary residences showing a pronounced short-run rise; iii) financially active households rebalance by increasing their holdings of stocks and private-equity; iv) decreases in risky asset values are concentrated among the wealthiest households; v) housing responses are highly heterogeneous, with richer households expanding primary and secondary housing; vi) holding adjustments vary across the wealth distribution: stock holdings increase slightly more at the top, while private-equity increases are concentrated in the tails.
-                </p>
+                <details class="paper-abstract-toggle">
+                    <summary>Abstract</summary>
+                    <p class="paper-abstract">
+                        How does monetary policy affect household portfolio composition? Resorting to highly granular data on the balance sheets of Norwegian households, we analyze how their wealth portfolios change in response to well-identified monetary policy shocks. We document new empirical facts about how household portfolios adjust to monetary tightening: i) total portfolio size rises initially but contracts after two years; ii) risky asset values decline, while housing wealth increases briefly before falling, with secondary residences showing a pronounced short-run rise; iii) financially active households rebalance by increasing their holdings of stocks and private-equity; iv) decreases in risky asset values are concentrated among the wealthiest households; v) housing responses are highly heterogeneous, with richer households expanding primary and secondary housing; vi) holding adjustments vary across the wealth distribution: stock holdings increase slightly more at the top, while private-equity increases are concentrated in the tails.
+                    </p>
+                </details>
             </div>
         </div>
 
